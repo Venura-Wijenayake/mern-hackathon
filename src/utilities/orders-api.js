@@ -27,5 +27,5 @@ export function checkout() {
 }
 
 export function getAllForUser() {
-  return sendRequest('${BASE_URL}');
+  return sendRequest(`${BASE_URL}`);
 }

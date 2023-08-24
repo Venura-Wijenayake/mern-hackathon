@@ -9,7 +9,6 @@ module.exports = {
   getAllForUser
 };
 
-
 async function getAllForUser(req, res) {
   const orders = await Order.find({user: req.user._id, isPaid: true}).sort('-updatedAt');
   res.json(orders);
