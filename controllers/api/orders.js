@@ -6,10 +6,10 @@ module.exports = {
   addToCart,
   setItemQtyInCart,
   checkout,
-  getAllForUser
+  userCheckout
 };
 
-async function getAllForUser(req, res) {
+async function userCheckout(req, res) {
   const orders = await Order.find({user: req.user._id, isPaid: true}).sort('-updatedAt');
   res.json(orders);
 }
